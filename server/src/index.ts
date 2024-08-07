@@ -23,6 +23,10 @@ app.use(
 app.use("/compiler", compilerRouter);
 app.use("/user", userRouter);
 
+app.get("/",(req,res)=>{
+  res.send("your server is running !")
+})
+
 dbConnect();
 
 const PORT = process.env.PORT || 4000;
